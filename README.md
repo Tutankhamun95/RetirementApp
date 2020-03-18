@@ -1,1 +1,0 @@
-Hello, this is Tut-Technologies's Approach to a Simple Retirement App.
