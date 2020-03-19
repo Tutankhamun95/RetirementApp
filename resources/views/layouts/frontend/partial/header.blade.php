@@ -1,4 +1,4 @@
-  <!-- Navigation -->
+  {{-- <!-- Navigation -->
 
 
   <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
@@ -36,4 +36,4 @@
 
   <!--/ Carousel Star /-->
 
-  <!-- Masthead -->
+  <!-- Masthead --> --}}

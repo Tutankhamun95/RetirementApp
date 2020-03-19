@@ -15,7 +15,7 @@
 		<link rel="stylesheet" type="text/css" href="{{asset('assets/frontend/css/normalize.css')}}" />
 		<link rel="stylesheet" type="text/css" href="{{asset('assets/frontend/css/demo.css')}}" />
 		<link rel="stylesheet" type="text/css" href="{{asset('assets/frontend/css/component.css')}}" />
-<style>
+{{-- <style>
   .parallax {
     /* The image used */
     background-image: url('{{asset('assets/frontend/img/main.jpg')}}');
@@ -35,7 +35,7 @@
       width: 100%;
       height: 100%;
   }
-  </style>
+  </style> --}}
 @endpush
 
 @section('content') 
@@ -78,7 +78,7 @@
     </a>
   </header>
   <!-- Initial markup -->
-  <div class="segmenter" style="background-image: url(img/2.jpg)"></div>
+  <div class="segmenter" style="background-image: url('{{asset('assets/frontend/2.jpg')}}');"></div>
   <h2 class="trigger-headline trigger-headline--hidden"><span>C</span><span>o</span><span>p</span><span>p</span><span>e</span><span>r</span></h2>
   <div class="bottom-nav">
     <button class="btn btn--trigger">Show Effect</button>

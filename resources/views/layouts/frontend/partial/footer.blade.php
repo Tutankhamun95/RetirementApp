@@ -1,4 +1,4 @@
-  <!--/ footer Star /-->
+  {{-- <!--/ footer Star /-->
   <section class="section-footer">
     <div class="container">
       <div class="row">
@@ -119,4 +119,4 @@
       </div>
     </div>
   </footer>
-  <!--/ Footer End /-->
+  <!--/ Footer End /--> --}}
