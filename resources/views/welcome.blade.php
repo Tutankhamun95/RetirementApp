@@ -79,7 +79,7 @@
   </header>
   <!-- Initial markup -->
   <div class="segmenter" style="background-image: url('{{asset('assets/frontend/img/2.jpg')}}');"></div>
-  <h2 class="trigger-headline trigger-headline--hidden"><span>C</span><span>o</span><span>p</span><span>p</span><span>e</span><span>r</span></h2>
+  <h2 class="trigger-headline trigger-headline--hidden"><span><button class="btn">Show Effect</button></span></h2>
   <div class="bottom-nav">
     <button class="btn btn--trigger">Show Effect</button>
     {{-- <nav class="codrops-demos">
