@@ -78,10 +78,30 @@
     </a> --}}
   </header>
   <!-- Initial markup -->
-  <div class="segmenter" style="background-image: url('{{asset('assets/frontend/img/2.jpg')}}');"></div>
-  <h2 class="trigger-headline trigger-headline--hidden"><span><button class="btn">Show Effect</button></span></h2>
+  <div class="segmenter" style="background-image: url('{{asset('assets/frontend/img/bg.jpg')}}');">
+    
+  </div>
+  <h3 style="	top: -100px;
+  font-family:monospace; 
+	left: 0;
+	position: absolute;
+	font-size: 6vw;
+	text-transform: uppercase;
+	pointer-events: none;
+	line-height: 1;
+	width: 100%;
+	height: 100%;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	justify-content: center;
+	margin: 0;">Welcome to RetirementApp</h3>
+  <h2 class="trigger-headline trigger-headline--hidden"><span><a style="font-size: 15px;" href="{{route('login')}}" class="btn">Login</a></span><span><a style="font-size: 15px;" href="{{route('register')}}" class="btn">Register</a></span></h2> 
   <div class="bottom-nav">
-    <button class="btn btn--trigger">Show Effect</button>
+    <button class="btn btn--trigger">Enter</button>
     {{-- <nav class="codrops-demos">
       <span>Examples: </span>
       <a href="index.html">1</a>
