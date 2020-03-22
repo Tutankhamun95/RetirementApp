@@ -58,7 +58,19 @@
       </div>
 
 
-
+     <!-- Bootstrap core JavaScript -->
+     <script src="{{asset('assets/backend/vendor/jquery/jquery.min.js')}}"></script>
+     <script src="{{asset('assets/backend/vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+   
+     <!-- Plugin JavaScript -->
+     <script src="{{asset('assets/backend/vendor/jquery-easing/jquery.easing.min.js')}}"></script>
+   
+     <!-- Contact Form JavaScript -->
+     <script src="{{asset('assets/backend/js/jqBootstrapValidation.js')}}"></script>
+     <script src="{{asset('assets/backend/js/contact_me.js')}}"></script>
+   
+     <!-- Custom scripts for this template -->
+     <script src="{{asset('assets/backend/js/freelancer.min.js')}}"></script>
   @stack('js')
 
 </body>
