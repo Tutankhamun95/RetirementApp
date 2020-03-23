@@ -26,8 +26,13 @@ expected_monthly.addEventListener("input", functions);
 expected_post_retirement.addEventListener("input", functions);
 inflation_rate.addEventListener("input", functions);
 interest_rate.addEventListener("input", functions);
+income_aside.addEventListener("input", functions);
+projected_insurance_policy.addEventListener("input", functions);
+projected_cpf_savings.addEventListener("input", functions);
+projected_value_assets.addEventListener("input", functions);
 
 function functions() {
+    
   
     var ca = parseFloat(current_age.value) || 0;
     var ra = parseFloat(retirement_age.value) || 0;
@@ -35,7 +40,14 @@ function functions() {
     var epr = parseFloat(expected_post_retirement.value) || 0;
     var infr = parseFloat(inflation_rate.value) || 0;
     var intr = parseFloat(interest_rate.value) || 0;
-    // var ytr = parseFloat(years_to_retire.value) || 0;
+    var ia = parseFloat(income_aside.value) || 0;
+    var pip = parseFloat(projected_insurance_policy.value) || 0;
+    var cpf = parseFloat(projected_cpf_savings.value) || 0;
+    var va = parseFloat(projected_value_assets.value) || 0;
+
+    //contstants
+
+    
       
     var expectedYearly = em*12;
     var currentAge = ca;
@@ -44,14 +56,49 @@ function functions() {
     var inflationRate = infr;
     var interestRate = intr;
     var yearsToRetire = ra-ca;
-    var firstYearExpenses = ca;
+    var firstYearExpenses = (expectedYearly)*Math.pow((1+(4/100)),(yearsToRetire));
     
-    currentage.innerHTML = "Your current age is : " + currentAge;
-    retirementage.innerHTML = "Your retirement age is : " + retirementAge;
+    var rz = ( (1 + interestRate/100 ) / (1 + inflationRate/100)  - 1);
+    var rzb = 1 + (rz);
+    var rzn = Math.pow(rzb, ((-1)*(expectedPostRetirement)));
+
+
+    var x;
+
+    if((inflationRate && interestRate == 0) || (inflationRate == interestRate))
+    {
+        x = expectedPostRetirement; 
+    } else{
+        x = (1-rzn)/rz*rzb; 
+    }
+
+    var sumRequired = (firstYearExpenses) * (x);
+
+    var incomeAside = ia;
+
+    var y;
+
+    if(interestRate == 0)
+    {
+        y = yearsToRetire;
+    } 
+    
+    else
+    {
+        y = (1+interestRate/100) * ((Math.pow((1+interestRate/100), (yearsToRetire))-1))/(interestRate/100);
+    }
+
+    var projectedSavings =  (incomeAside) * (y);
+
+    var totalFunds = pip + cpf + va + projectedSavings;
+
+    var totalShortfall = totalFunds - sumRequired; 
+
     expectedyearly.innerHTML = "Expected yearly expenses required during retirement years : " + expectedYearly;
-    expectedpostretirement.innerHTML = "Your expected lifespan post retirement is : " + expectedPostRetirement;
-    inflationrate.innerHTML = "Inflation rate is : " + inflationRate;
-    interestrate.innerHTML = "Inflation rate is : " + interestRate;
-    yearstoretire.innerHTML = "Number of Years to Retirement : " + yearsToRetire;
-    firstyearexpenses.innerHTML = "Total sum required in" + yearsToRetire + " years to fund your retirement : " + firstYearExpenses;
+    testing.innerHTML = "Your first year expenses will be : " + firstYearExpenses;
+    sumrequired.innerHTML = "Total sum required in " + yearsToRetire + "years to fund your Retirement : " + sumRequired;
+    projectedsavings.innerHTML = "Projected Savings in " + yearsToRetire + " years : " + projectedSavings;
+    totalshortfall.innerHTML = "Your total shortfall will be : " + totalShortfall;
+
+
 }

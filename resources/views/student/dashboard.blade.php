@@ -232,6 +232,10 @@
                           <input type="text" id="expected_post_retirement" class="form-control" placeholder="Enter your expected lifespan post retirement"><br>
                           <input type="text" id="inflation_rate" class="form-control" placeholder="Enter your expected lifespan post retirement"><br>
                           <input type="text" id="interest_rate" class="form-control" placeholder="Enter your expected lifespan post retirement"><br>
+                          <input type="text" id="income_aside" class="form-control" placeholder="Annual Income Put Aside"><br>
+                          <input type="text" id="projected_insurance_policy" class="form-control" placeholder="Annual Income Put Aside"><br>
+                          <input type="text" id="projected_cpf_savings" class="form-control" placeholder="Annual Income Put Aside"><br>
+                          <input type="text" id="projected_value_assets" class="form-control" placeholder="Annual Income Put Aside"><br>
                         
                       </form>
                       
@@ -240,19 +244,12 @@
                   
                     </div>
                     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-
-                      <p id="currentage"></p>
-                      <p id="retirementage"></p>
                       <p id="expectedyearly"></p>
-                      <p id="expectedpostretirement"></p>
-                      <p id="inflationrate"></p> 
-                      <p id="interestrate"></p>
-                      <p id="yearstoretire"></p>
-                      <p id="firstyearexpenses"></p>
-                                       
-                  
+                      <p id="testing"></p>
+                      <p id="sumrequired"></p>
+                      <p id="projectedsavings"></p>
+                      <p id="totalshortfall"></p>
                     </div>
-
                 </p>
                 <button class="btn btn-primary" href="#" data-dismiss="modal">
                   <i class="fas fa-times fa-fw"></i>
