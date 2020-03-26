@@ -10,7 +10,13 @@
 
 @push('css')
 
-    
+      <!-- Custom fonts for this theme -->
+  <link href="{{asset('assets/backend/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+  <!-- Theme CSS -->
+  <link href="{{asset('assets/backend/css/freelancer.min.css')}}" rel="stylesheet">
 
 @endpush
 
@@ -22,10 +28,14 @@
 
 
 
-<body id="page-top">
+<body style="background-image: url('{{asset('assets/frontend/img/bg.jpg')}}');      min-height: 500px;
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;" id="page-top">
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+  <nav style="background-color: #510c05!important;" class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
     <div class="container">
       <a class="navbar-brand js-scroll-trigger" href="#page-top"><span class="mr-2 d-none d-lg-inline text-gray-600 small">RetirementApp</span></a>
       <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,7 +73,7 @@
   </nav>
 
   <!-- Masthead -->
-  <header class="masthead bg-primary text-white text-center">
+  <header style="background-color: #ffffff00 !important;" class="masthead bg-primary text-white text-center">
     <div class="container d-flex align-items-center flex-column">
 
       <!-- Masthead Heading -->
@@ -89,15 +99,15 @@
     <div class="container">
 
       <!-- Portfolio Section Heading -->
-      <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Calculator</h2>
+      <h2 style="color: #ffffff!important;" class="page-section-heading text-center text-uppercase text-secondary mb-0">Calculator</h2>
 
       <!-- Icon Divider -->
       <div class="divider-custom">
-        <div class="divider-custom-line"></div>
-        <div class="divider-custom-icon">
-          <i class="fas fa-star"></i>
+        <div style="background-color: #ffffff!important;" class="divider-custom-line"></div>
+        <div style="color: #ffffff!important;" class="divider-custom-icon">
+          <i style="color: #ffffff!important;" class="fas fa-star"></i>
         </div>
-        <div class="divider-custom-line"></div>
+        <div style="background-color: #ffffff!important;" class="divider-custom-line"></div>
       </div>
 
       <!-- Portfolio Grid Items -->
@@ -123,7 +133,7 @@
 
 
   <!-- Footer -->
-  <footer class="footer text-center">
+  <footer style="background-color: #510c05!important;" class="footer text-center">
     <div class="container">
       <div class="row">
 
@@ -186,20 +196,20 @@
             <i class="fas fa-times"></i>
           </span>
         </button>
-        <div class="modal-body text-center">
+        <div style="overflow-y: scroll;" class="modal-body text-center">
           <div class="container">
             <div class="row justify-content-center">
               <div  class="col-lg-8">
                 <!-- Portfolio Modal - Title -->
-                <h6 class="portfolio-modal-title text-secondary text-uppercase mb-0">RetirementApp</h6>
+                {{-- <h6 class="portfolio-modal-title text-secondary text-uppercase mb-0">RetirementApp</h6> --}}
                 <!-- Icon Divider -->
-                <div class="divider-custom">
+                {{-- <div class="divider-custom">
                   <div class="divider-custom-line"></div>
                   <div class="divider-custom-icon">
                     <i class="fas fa-star"></i>
                   </div>
                   <div class="divider-custom-line"></div>
-                </div>
+                </div> --}}
                 <!-- Portfolio Modal - Image -->
                 {{-- <img class="img-fluid rounded mb-5" src="img/portfolio/cabin.png" alt=""> --}}
                 <!-- Portfolio Modal - Text -->
@@ -247,7 +257,12 @@
                       <p id="sumrequired"></p>
                       <p id="projectedsavings"></p>
                       <p id="totalshortfall"></p>
+
+                      <div id="chartContainer" style="height: 300px; width: 100%;">
+                      </div>
                     </div>
+
+
 
                     
                 </p>
@@ -273,6 +288,8 @@
 
 
 @push('js')
+
+  <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 

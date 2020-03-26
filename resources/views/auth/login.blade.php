@@ -30,7 +30,7 @@
 
 
 @section('content')
-<div class="segmenter" style="background-image: url('{{asset('assets/frontend/img/bg.jpg')}}'); background-image: url('{{asset('assets/frontend/img/bg.jpg')}}');     min-height: 500px;
+<div class="segmenter" style="background-image: url('{{asset('assets/frontend/img/bg.jpg')}}');      min-height: 500px;
 background-attachment: fixed;
 background-position: center;
 background-repeat: no-repeat;
