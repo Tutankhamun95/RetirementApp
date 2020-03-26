@@ -27,7 +27,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top"><span class="mr-2 d-none d-lg-inline text-gray-600 small">Welcome, {{Auth::user()->name}}</span></a>
+      <a class="navbar-brand js-scroll-trigger" href="#page-top"><span class="mr-2 d-none d-lg-inline text-gray-600 small">RetirementApp</span></a>
       <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
         <i class="fas fa-bars"></i>
@@ -67,7 +67,7 @@
     <div class="container d-flex align-items-center flex-column">
 
       <!-- Masthead Heading -->
-      <h1 class="masthead-heading text-uppercase mb-0">Welcome, {{Auth::user()->name}} to your RetirementApp</h1>
+      <h1 class="masthead-heading text-uppercase mb-0">Welcome, {{Auth::user()->name}}</h1>
 
       <!-- Icon Divider -->
       <div class="divider-custom divider-light">
@@ -129,10 +129,9 @@
 
         <!-- Footer Location -->
         <div class="col-lg-4 mb-5 mb-lg-0">
-          <h4 class="text-uppercase mb-4">Location</h4>
-          <p class="lead mb-0">2215 John Daniel Drive
-            <br>Clark, MO 65243</p>
+
         </div>
+
 
         <!-- Footer Social Icons -->
         <div class="col-lg-4 mb-5 mb-lg-0">
@@ -153,10 +152,9 @@
 
         <!-- Footer About Text -->
         <div class="col-lg-4">
-          <h4 class="text-uppercase mb-4">About Freelancer</h4>
-          <p class="lead mb-0">Freelance is a free to use, MIT licensed Bootstrap theme created by
-            <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
+
         </div>
+
 
       </div>
     </div>
@@ -165,7 +163,7 @@
   <!-- Copyright Section -->
   <section class="copyright py-4 text-center text-white">
     <div class="container">
-      <small>Copyright &copy; Your Website 2019</small>
+      <small>Copyright &copy; Your Website 2020</small>
     </div>
   </section>
 
@@ -193,7 +191,7 @@
             <div class="row justify-content-center">
               <div  class="col-lg-8">
                 <!-- Portfolio Modal - Title -->
-                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Log Cabin</h2>
+                <h6 class="portfolio-modal-title text-secondary text-uppercase mb-0">RetirementApp</h6>
                 <!-- Icon Divider -->
                 <div class="divider-custom">
                   <div class="divider-custom-line"></div>
@@ -205,7 +203,7 @@
                 <!-- Portfolio Modal - Image -->
                 {{-- <img class="img-fluid rounded mb-5" src="img/portfolio/cabin.png" alt=""> --}}
                 <!-- Portfolio Modal - Text -->
-                <p class="mb-5">
+                <p style="text-align: center;" class="mb-5">
 
 
                   <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -226,16 +224,16 @@
                       
                       <form action="#" class="form-inline">
                       
-                          <input type="text" id="current_age"class="form-control" placeholder="Enter your age"><br>
-                          <input type="text" id="retirement_age" class="form-control" placeholder="Enter your retirement age"><br>
-                          <input type="text" id="expected_monthly" class="form-control" placeholder="Enter your expected monthly income"><br>
-                          <input type="text" id="expected_post_retirement" class="form-control" placeholder="Enter your expected lifespan post retirement"><br>
-                          <input type="text" id="inflation_rate" class="form-control" placeholder="Enter your expected lifespan post retirement"><br>
-                          <input type="text" id="interest_rate" class="form-control" placeholder="Enter your expected lifespan post retirement"><br>
-                          <input type="text" id="income_aside" class="form-control" placeholder="Annual Income Put Aside"><br>
-                          <input type="text" id="projected_insurance_policy" class="form-control" placeholder="Annual Income Put Aside"><br>
-                          <input type="text" id="projected_cpf_savings" class="form-control" placeholder="Annual Income Put Aside"><br>
-                          <input type="text" id="projected_value_assets" class="form-control" placeholder="Annual Income Put Aside"><br>
+                          <input type="text" id="current_age"class="form-control" placeholder="Current your age"><br>
+                          <input type="text" id="retirement_age" class="form-control" placeholder="Retirement age"><br>
+                          <input type="text" id="expected_monthly" class="form-control" placeholder="Expected monthly income"><br>
+                          <input type="text" id="expected_post_retirement" class="form-control" placeholder="Expected lifespan post retirement"><br>
+                          <input type="text" id="inflation_rate" class="form-control" placeholder="Enter Inflation Rate"><br>
+                          <input type="text" id="interest_rate" class="form-control" placeholder="Enter Interest Rate"><br>
+                          <input type="text" id="income_aside" class="form-control" placeholder="Income Put Aside for Retirement"><br>
+                          <input type="text" id="projected_insurance_policy" class="form-control" placeholder="Projected Value of Insurance Policies"><br>
+                          <input type="text" id="projected_cpf_savings" class="form-control" placeholder="Projected CPF Savings"><br>
+                          <input type="text" id="projected_value_assets" class="form-control" placeholder="Projected Value of Other Assets"><br>
                         
                       </form>
                       
@@ -250,6 +248,8 @@
                       <p id="projectedsavings"></p>
                       <p id="totalshortfall"></p>
                     </div>
+
+                    
                 </p>
                 <button class="btn btn-primary" href="#" data-dismiss="modal">
                   <i class="fas fa-times fa-fw"></i>

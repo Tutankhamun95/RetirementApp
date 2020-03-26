@@ -73,6 +73,7 @@
      <!-- Custom scripts for this template -->
      <script src="{{asset('assets/backend/js/freelancer.min.js')}}"></script>
      <script src="{{asset('assets/backend/js/calculator.js')}}"></script>
+
   @stack('js')
 
 </body>

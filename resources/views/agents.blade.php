@@ -1,6 +1,6 @@
 @extends('layouts.frontend.app')
 
-@section('title','Login')
+@section('title','RetirementApp')
 
 @push('css')
 <link href="{{asset('assets/frontend/img/favicon.png')}}" rel="icon">

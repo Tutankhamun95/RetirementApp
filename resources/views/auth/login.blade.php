@@ -1,6 +1,6 @@
 @extends('layouts.frontend.app')
 
-@section('title','Login')
+@section('title','RetirementApp')
 
 @push('css')
 
@@ -30,7 +30,11 @@
 
 
 @section('content')
-<div class="segmenter" style="background-image: url('{{asset('assets/frontend/img/bg.jpg')}}');">
+<div class="segmenter" style="background-image: url('{{asset('assets/frontend/img/bg.jpg')}}'); background-image: url('{{asset('assets/frontend/img/bg.jpg')}}');     min-height: 500px;
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;">
     
   <p style="text-align: center;">   <section style="margin-top:120px !important; "  class="page-section" id="contact">
 
