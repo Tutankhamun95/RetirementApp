@@ -120,14 +120,14 @@ window.onload = function () {
     ];
 
 
-    document.getElementById("expectedyearly").innerHTML = "Your Expected yearly expenses required during retirement years are : " + expectedYearly;
+    document.getElementById("expectedyearly").innerHTML = "Your Expected yearly expenses required during retirement years are : " + Math.round(expectedYearly);
 
-    document.getElementById("testing").innerHTML = "Total sum required in "+yearsToRetire+" years to fund your retirement : " + sumRequired;
+    document.getElementById("testing").innerHTML = "Total sum required in "+yearsToRetire+" years to fund your retirement : " + Math.round(sumRequired);
 
-    document.getElementById("projectedsavings").innerHTML = "Projected value of your retirement savings in " + yearsToRetire + " years : " + projectedSavings;
+    document.getElementById("projectedsavings").innerHTML = "Projected value of your retirement savings in " + yearsToRetire + " years : " + Math.round(projectedSavings);
 
 
-    document.getElementById("totalshortfall").innerHTML = "Total Shortfall : " + totalShortfall ;
+    document.getElementById("totalshortfall").innerHTML = "Total Shortfall : " + Math.round(totalShortfall) ;
 
 
 
