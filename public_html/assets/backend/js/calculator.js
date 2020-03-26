@@ -32,6 +32,7 @@ projected_cpf_savings.addEventListener("input", window.onload);
 projected_value_assets.addEventListener("input", window.onload);
 
 
+
 window.onload = function () {
 
     var ca = parseFloat(current_age.value) || 0;
@@ -94,6 +95,9 @@ window.onload = function () {
 
     totalShortfall = totalFunds - sumRequired; 
 
+    // test = new functions();
+        
+    // m = test.totalShortfall;
 
     var chart = new CanvasJS.Chart("chartContainer");
 
@@ -110,10 +114,20 @@ window.onload = function () {
 
 
     series1.dataPoints = [
-            { label: "Funds Required", y: sumRequired},
-            { label: "Funds Available", y: totalFunds},
-            { label: "Gap", y: totalShortfall*(-1) }
+        { label: "Funds Required", y: sumRequired},
+        { label: "Funds Available", y: totalFunds},
+        { label: "Gap", y: totalShortfall*(-1) }
     ];
+
+
+    document.getElementById("expectedyearly").innerHTML = "Your Expected yearly expenses required during retirement years are : " + expectedYearly;
+
+    document.getElementById("testing").innerHTML = "Total sum required in "+yearsToRetire+" years to fund your retirement : " + sumRequired;
+
+    document.getElementById("projectedsavings").innerHTML = "Projected value of your retirement savings in " + yearsToRetire + " years : " + projectedSavings;
+
+
+    document.getElementById("totalshortfall").innerHTML = "Total Shortfall : " + totalShortfall ;
 
 
 

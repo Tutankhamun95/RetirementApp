@@ -42,7 +42,7 @@
           <div  class="container">
       
             <!-- Contact Section Heading -->
-            <h1 style="text-align: center;" class="title">Login</h1>
+            <h1 style="text-align: center;" class="title">Register</h1>
       
             <!-- Icon Divider -->
       

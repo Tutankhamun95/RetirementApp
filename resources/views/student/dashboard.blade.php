@@ -18,6 +18,94 @@
   <!-- Theme CSS -->
   <link href="{{asset('assets/backend/css/freelancer.min.css')}}" rel="stylesheet">
 
+
+
+
+  <style>
+    .description {
+  font-style: italic;
+  font-weight: 200;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+
+.clue {
+  margin-left: 0.25rem;
+  font-size: 0.9rem;
+  color: #e4e4e4;
+}
+
+.text-center {
+  text-align: center;
+}
+
+
+
+/* form */
+
+form {
+  background: var(--color-darkblue-alpha);
+  padding: 2.5rem 0.625rem;
+  border-radius: 0.25rem;
+}
+
+@media (min-width: 480px) {
+  form {
+    padding: 2.5rem;
+  }
+}
+
+.form-group {
+  margin: 0 auto 1.25rem auto;
+  padding: 0.25rem;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: 2.375rem;
+  padding: 0.375rem 0.75rem;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.input-radio,
+.input-checkbox {
+  display: inline-block;
+  margin-right: 0.625rem;
+  min-height: 1.25rem;
+  min-width: 1.25rem;
+}
+
+.input-textarea {
+  min-height: 120px;
+  width: 100%;
+  padding: 0.625rem;
+  resize: vertical;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--color-green);
+  color: inherit;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+    </style>
+
 @endpush
 
 
@@ -113,6 +201,9 @@ background-size: cover;" id="page-top">
       <!-- Portfolio Grid Items -->
       <div class="row">
 
+        <div class="col-md-6 col-lg-4">
+        </div>
+
         <!-- Portfolio Item 1 -->
         <div class="col-md-6 col-lg-4">
           <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal1">
@@ -123,6 +214,9 @@ background-size: cover;" id="page-top">
             </div>
             <img class="img-fluid" src="{{asset('assets/backend/img/portfolio/cabin.png')}}" alt="">
           </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4">
         </div>
 
       </div>
@@ -196,7 +290,12 @@ background-size: cover;" id="page-top">
             <i class="fas fa-times"></i>
           </span>
         </button>
-        <div style="overflow-y: scroll;" class="modal-body text-center">
+        <div style="overflow-y: scroll; background-image: url(https://everydayjournal.000webhostapp.com/assets/frontend/img/bg.jpg);
+        min-height: 500px;
+        background-attachment: fixed;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;" class="modal-body text-center">
           <div class="container">
             <div class="row justify-content-center">
               <div  class="col-lg-8">
@@ -216,12 +315,15 @@ background-size: cover;" id="page-top">
                 <p style="text-align: center;" class="mb-5">
 
 
-                  <ul class="nav nav-tabs" id="myTab" role="tablist">
+                  <ul  style="text-align: center;display: -webkit-inline-box !important;     color: #e4dabd !important;
+                  font-weight: bold;" class="nav nav-tabs" id="myTab" role="tablist">
                     <li class="nav-item">
-                      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+                      <a  style="text-align: center;    color: #e4dabd !important;
+                      font-weight: bold;" class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Calculate</a>
                     </li>
-                    <li class="nav-item">
-                      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="true">Profile</a>
+                    <li style="text-align: center;" class="nav-item">
+                      <a style="text-align: center;    color: #e4dabd !important;
+                      font-weight: bold;" class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="true">Preview</a>
                     </li>
                     <li class="nav-item">
                       
@@ -232,35 +334,94 @@ background-size: cover;" id="page-top">
                   
                       <div class="container text-center">
                       
-                      <form action="#" class="form-inline">
                       
-                          <input type="text" id="current_age"class="form-control" placeholder="Current your age"><br>
-                          <input type="text" id="retirement_age" class="form-control" placeholder="Retirement age"><br>
-                          <input type="text" id="expected_monthly" class="form-control" placeholder="Expected monthly income"><br>
-                          <input type="text" id="expected_post_retirement" class="form-control" placeholder="Expected lifespan post retirement"><br>
-                          <input type="text" id="inflation_rate" class="form-control" placeholder="Enter Inflation Rate"><br>
-                          <input type="text" id="interest_rate" class="form-control" placeholder="Enter Interest Rate"><br>
-                          <input type="text" id="income_aside" class="form-control" placeholder="Income Put Aside for Retirement"><br>
-                          <input type="text" id="projected_insurance_policy" class="form-control" placeholder="Projected Value of Insurance Policies"><br>
-                          <input type="text" id="projected_cpf_savings" class="form-control" placeholder="Projected CPF Savings"><br>
-                          <input type="text" id="projected_value_assets" class="form-control" placeholder="Projected Value of Other Assets"><br>
-                        
-                      </form>
+
+                      <div class="form-group">
+                        <label style="text-align: center;    color: #e4dabd !important;
+                        font-weight: bold;" id="number-label" for="number">Current Age</label>
+                        <input type="text" id="current_age"class="form-control" placeholder="Current your age" />
+                      </div>
+
+                      <div class="form-group">
+                        <label style="text-align: center;    color: #e4dabd !important;
+                        font-weight: bold;" id="number-label" for="number">Retirement Age</label>
+                        <input type="text" id="retirement_age" class="form-control" placeholder="Retirement age" />
+                      </div>
+
+                      <div class="form-group">
+                        <label style="text-align: center;    color: #e4dabd !important;
+                        font-weight: bold;" id="number-label" for="number">Expected Monthly Expenses during Retirement</label>
+                        <input type="text" id="expected_monthly" class="form-control" placeholder="Expected monthly expenses" />
+                      </div>
+
+                      <p style="text-align: center;    color: #e4dabd !important;
+                      font-weight: bold;" id="expectedyearly"></p>
+
+                      <div class="form-group">
+                        <label style="text-align: center;    color: #e4dabd !important;
+                        font-weight: bold;" id="number-label" for="number">Expected Lifespan post Retirement</label>
+                        <input type="text" id="expected_post_retirement" class="form-control" placeholder="Expected lifespan post retirement" />
+                      </div>
+                      <div class="form-group">
+                        <label style="text-align: center;    color: #e4dabd !important;
+                        font-weight: bold;" id="number-label" for="number">Inflation Rate</label>
+                        <input type="text" id="inflation_rate" class="form-control" placeholder="Enter Inflation Rate" />
+                      </div>
+                      <div class="form-group">
+                        <label style="text-align: center;    color: #e4dabd !important;
+                        font-weight: bold;" id="number-label" for="number">Interest Rate</label>
+                        <input type="text" id="interest_rate" class="form-control" placeholder="Enter Interest Rate" />
+                      </div>
+
+                      <p style="text-align: center;    color: #e4dabd !important;
+                      font-weight: bold;" id="testing"></p>
+
+                      <div class="form-group">
+                        <label style="text-align: center;    color: #e4dabd !important;
+                        font-weight: bold;" id="number-label" for="number">Annual Income Put Aside for retirement</label>
+                        <input type="text" id="income_aside" class="form-control" placeholder="Income Put Aside for Retirement" />
+                      </div>
+
+                      <p style="text-align: center;    color: #e4dabd !important;
+                      font-weight: bold;" id="projectedsavings"></p>
+
+
+                      <div class="form-group">
+                        <label style="text-align: center;    color: #e4dabd !important;
+                        font-weight: bold;" id="number-label" for="number">Projected Value of Insurance Policies</label>
+                        <input type="text" id="projected_insurance_policy" class="form-control" placeholder="Projected Value of Insurance Policies" />
+                      </div>
+
+                      <div class="form-group">
+                        <label style="text-align: center;    color: #e4dabd !important;
+                        font-weight: bold;" id="number-label" for="number">Projected CPF Savings</label>
+                        <input type="text" id="projected_cpf_savings" class="form-control" placeholder="Projected CPF Savings" />
+                      </div>
+
+                      <div class="form-group">
+                        <label style="text-align: center;    color: #e4dabd !important;
+                        font-weight: bold;" id="number-label" for="number">Projected Value of Other Assets</label>
+                        <input type="text" id="projected_value_assets" class="form-control" placeholder="Projected Value of Other Assets" />
+                      </div>
+
+
+                      <p style="text-align: center;    color: #e4dabd !important;
+                      font-weight: bold;" id="totalshortfall"></p>
                       
                       </div>
                   
                   
                     </div>
                     <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                      <p id="expectedyearly"></p>
-                      <p id="testing"></p>
-                      <p id="sumrequired"></p>
-                      <p id="projectedsavings"></p>
-                      <p id="totalshortfall"></p>
+                      {{-- <p id="expectedyearly"></p> --}}
+                      {{-- <p id="testing"></p> --}}
+                      {{-- <p id="sumrequired"></p> --}}
+                      {{-- <p id="projectedsavings"></p> --}}
+                      {{-- <p id="totalshortfall"></p> --}}
 
                       <div id="chartContainer" style="height: 300px; width: 100%;">
                       </div>
-                      <p id="demo"></p>
+                      {{-- <p id="demo"></p> --}}
 
                     </div>
 
