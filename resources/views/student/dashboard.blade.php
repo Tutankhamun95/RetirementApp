@@ -260,6 +260,8 @@ background-size: cover;" id="page-top">
 
                       <div id="chartContainer" style="height: 300px; width: 100%;">
                       </div>
+                      <p id="demo"></p>
+
                     </div>
 
 

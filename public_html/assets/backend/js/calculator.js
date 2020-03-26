@@ -20,20 +20,20 @@ var $rz;
 var $rzb;
 var $rzn;
 
-current_age.addEventListener("input", functions);
-retirement_age.addEventListener("input", functions);
-expected_monthly.addEventListener("input", functions);
-expected_post_retirement.addEventListener("input", functions);
-inflation_rate.addEventListener("input", functions);
-interest_rate.addEventListener("input", functions);
-income_aside.addEventListener("input", functions);
-projected_insurance_policy.addEventListener("input", functions);
-projected_cpf_savings.addEventListener("input", functions);
-projected_value_assets.addEventListener("input", functions);
+current_age.addEventListener("input", window.onload);
+retirement_age.addEventListener("input", window.onload);
+expected_monthly.addEventListener("input", window.onload);
+expected_post_retirement.addEventListener("input", window.onload);
+inflation_rate.addEventListener("input", window.onload);
+interest_rate.addEventListener("input", window.onload);
+income_aside.addEventListener("input", window.onload);
+projected_insurance_policy.addEventListener("input", window.onload);
+projected_cpf_savings.addEventListener("input", window.onload);
+projected_value_assets.addEventListener("input", window.onload);
 
-function functions() {
-    
-  
+
+window.onload = function () {
+
     var ca = parseFloat(current_age.value) || 0;
     var ra = parseFloat(retirement_age.value) || 0;
     var em = parseFloat(expected_monthly.value) || 0;
@@ -88,26 +88,16 @@ function functions() {
         y = (1+interestRate/100) * ((Math.pow((1+interestRate/100), (yearsToRetire))-1))/(interestRate/100);
     }
 
-    var projectedSavings =  (incomeAside) * (y);
+    projectedSavings =  (incomeAside) * (y);
 
-    var totalFunds = pip + cpf + va + projectedSavings;
+    totalFunds = pip + cpf + va + projectedSavings;
 
-    var totalShortfall = totalFunds - sumRequired; 
-
-    expectedyearly.innerHTML = "Expected yearly expenses required during retirement years : " + expectedYearly;
-    testing.innerHTML = "Your first year expenses will be : " + firstYearExpenses;
-    sumrequired.innerHTML = "Total sum required in " + yearsToRetire + "years to fund your Retirement : " + sumRequired;
-    projectedsavings.innerHTML = "Projected Savings in " + yearsToRetire + " years : " + projectedSavings;
-    totalshortfall.innerHTML = "Your total shortfall will be : " + totalShortfall;
+    totalShortfall = totalFunds - sumRequired; 
 
 
-}
-
-window.onload = function () {
     var chart = new CanvasJS.Chart("chartContainer");
 
     chart.options.axisY = { prefix: "$", suffix: "K", includeZero: false };
-    chart.options.title = { text: "Fruits sold in First & Second Quarter" };
 
     var series1 = { //dataSeries - first quarter
         type: "column",
@@ -115,32 +105,17 @@ window.onload = function () {
         showInLegend: true
     };
 
-    var series2 = { //dataSeries - second quarter
-        type: "column",
-        name: "Second Quarter",
-        showInLegend: true
-    };
-
     chart.options.data = [];
     chart.options.data.push(series1);
-    chart.options.data.push(series2);
 
 
     series1.dataPoints = [
-            { label: "banana", y: 58 },
-            { label: "orange", y: 69 },
-            { label: "apple", y: 80 },
-            { label: "mango", y: 74 },
-            { label: "grape", y: 64 }
+            { label: "Funds Required", y: sumRequired},
+            { label: "Funds Available", y: totalFunds},
+            { label: "Gap", y: totalShortfall*(-1) }
     ];
 
-    series2.dataPoints = [
-        { label: "banana", y: 63 },
-        { label: "orange", y: 73 },
-        { label: "apple", y: 88 },
-        { label: "mango", y: 77 },
-        { label: "grape", y: 60 }
-    ];
+
 
     chart.render();
 }
