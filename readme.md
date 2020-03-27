@@ -1,39 +1,50 @@
-Hello,
+Retirement App made with Laravel and Bootstrap
 
-To Register, go to Register and Register as a student.
+Calculator runs with Javascript 
 
-To Login as a Student, you can register first or login using the credentials below.
+Register to the app and refresh if you notice an error. You will be logged in as normal.
 
-To Login as SuperAdmin or School Admin, use the credentials below.
+This app is designed to implement a smooth, easy and modern looking interface to easily perform a custom calculation and present it in a modal using a chart. 
 
-
-
-
-SuperAdmin Login Details:  
-
-email: super@mail.com
-pwd: rootsuper
-
-
-SchoolAdmin Login Details:
-
-email: admin@mail.com
-pwd: rootschooladmin
+This app is open source and can be extended, the whole point behind this app is for it to be totally front end based and to be easily modified in the future. 
 
 
 
-SuperAdmin can create, read, update & delete Schools, Users, Projects, Readings & Members.
-
-SuperAdmin can create, read, update & delete Users, Projects, Readings & Members.
-
-Student can create, read, update & delete Readings & Projects. 
 
 
 
-Drawback: "School" isn't an entity that relates to a SchoolAdmin, Students, Projects & Readings. 
 
 
-Thanks for the opportunity.
 
-Regards,
-Ali
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.
+
+
+
+
+
+
+
+
+
+
+
+
